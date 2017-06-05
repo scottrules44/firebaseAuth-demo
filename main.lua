@@ -1,7 +1,7 @@
 local firebaseAuth = require "plugin.firebaseAuth"
 local widget = require("widget")
 local json = require("json")
-firebaseAuth.init("652763858765-hq7huph5a5to4m39gqsoo7cn0ih3bd3d.apps.googleusercontent.com")
+firebaseAuth.init("insertYoursHere.apps.googleusercontent.com")
 
 local loadProfilePage
 local signOut
