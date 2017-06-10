@@ -1,7 +1,7 @@
 local firebaseAuth = require "plugin.firebaseAuth"
 local widget = require("widget")
 local json = require("json")
-firebaseAuth.init("insertYoursHere.apps.googleusercontent.com")
+firebaseAuth.init()
 
 local loadProfilePage
 local signOut
@@ -94,28 +94,6 @@ createAccount = widget.newButton( {
   end
 } )
 signInGroup:insert( createAccount )
-
-local googleSignIn
-googleSignIn = widget.newButton( {
-  x = display.contentCenterX,
-  y = display.contentCenterY+200,
-  id = "googleSignIn",
-  labelColor = { default={ 1, 0, 0 }, over={ .5, 0, 0, 0.5 } },
-  label = "Sign In With Google",
-  onEvent = function ( e )
-    if (e.phase == "ended") then
-        firebaseAuth.signInWithGoogle(function (ev)
-            if(ev.isError) then
-                native.showAlert( "Could not Sign in with Google", ev.error ,{"Ok"} )
-            else
-                native.showAlert( "Signed in with Google", "" ,{"Ok"} )
-                loadProfilePage( )
-            end
-        end)
-    end
-  end
-} )
-signInGroup:insert( googleSignIn )
 signInGroup:toFront( )
 profileGroup:toFront( )
 

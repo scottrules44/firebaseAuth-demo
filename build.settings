@@ -25,11 +25,6 @@ settings =
 				"Icon-Small-50.png", 
 				"Icon-Small-50@2x.png",
 			},
-			 CFBundleURLTypes = {
-                {CFBundleURLSchemes = {
-					"com.googleusercontent.apps.replace",         
-                }}
-            },
 		},
 	},
 	plugins =
