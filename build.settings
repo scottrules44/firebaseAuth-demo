@@ -29,7 +29,7 @@ settings =
             FacebookAppID = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
             CFBundleURLTypes =
             {
-                { CFBundleURLSchemes = { "fbXXXXXXXXXX, } }  -- Replace XXXXXXXXXX with your Facebook App ID
+                { CFBundleURLSchemes = { "fbXXXXXXXXXX", } }  -- Replace XXXXXXXXXX with your Facebook App ID
             },
             -- Whitelist Facebook apps
             LSApplicationQueriesSchemes =
