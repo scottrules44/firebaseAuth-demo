@@ -25,6 +25,21 @@ settings =
 				"Icon-Small-50.png", 
 				"Icon-Small-50@2x.png",
 			},
+			 UIApplicationExitsOnSuspend = false,
+            FacebookAppID = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
+            CFBundleURLTypes =
+            {
+                { CFBundleURLSchemes = { "fbXXXXXXXXXX, } }  -- Replace XXXXXXXXXX with your Facebook App ID
+            },
+            -- Whitelist Facebook apps
+            LSApplicationQueriesSchemes =
+            {
+                "fb",  -- Needed for the facebook-v4.isFacebookAppEnabled() API
+                "fbapi",
+                "fbauth2",
+                "fb-messenger-api",
+                "fbshareextension"
+            },
 		},
 	},
 	plugins =
@@ -33,9 +48,14 @@ settings =
         {
             publisherId = "tech.scotth"
         },
+        ["plugin.facebook.v4"] =
+        {
+            publisherId = "com.coronalabs"
+        },
     },
     android =
     {
         useGoogleServicesJson = true,
+        facebookAppId = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
     },
 }
