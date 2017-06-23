@@ -132,8 +132,7 @@ signInWithFacebook = widget.newButton( {
         facebook.login(function ( event )
           if ( "session" == event.type ) then
             if ( "login" == event.phase ) then
-              local accessToken = facebook.getCurrentAccessToken()
-              firebaseAuth.signInWithFacebook(accessToken, function ( ev )
+              firebaseAuth.signInWithFacebook(event.token, function ( ev )
                 if(ev.isError) then
                     native.showAlert( "Could not Sign in", ev.error ,{"Ok"} )
                 else
