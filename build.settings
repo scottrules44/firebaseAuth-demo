@@ -46,7 +46,8 @@ settings =
     {
         ["plugin.firebaseAuth"] =
         {
-            publisherId = "tech.scotth"
+            publisherId = "tech.scotth",
+            marketplaceId = "Replace with your Id",
         },
         ["plugin.facebook.v4"] =
         {
